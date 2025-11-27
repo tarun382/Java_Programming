@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class exponential_value_of_digits 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number...");
+		int num = sc.nextInt();
+		int temp = num;
+		int count = 0;
+		int sum=0;
+		while(temp>0)
+		{
+			temp = temp/10;
+			count++;
+		}
+		while(num>0)
+		{
+			int ld = num%10;
+			int expo = 1;
+			for(int i = 1;i<=count;i++)
+			{
+				expo = expo*ld;
+			}
+			System.out.println("the exponential value of "+ld+ " is "+expo);
+			sum=sum+expo;
+			num=num/10;
+
+		}
+		System.out.println("sum of the expo is "+sum);
+	}
+}

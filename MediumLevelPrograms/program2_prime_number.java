@@ -1,0 +1,31 @@
+/* WAP to check wheather the given number is prime or not....?
+the number that has excatly two factors that number we called it as prime number
+eg:- 2 -  factors of 2 is -(1,2) 
+	 2 is a prime number...*/
+
+import java.util.Scanner;
+class program2_prime_number
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc =  new Scanner(System.in);
+		System.out.println("enter a number...");
+		int num = sc.nextInt();
+		int count = 0;
+		for (int i=1;i<=num;i++)
+		{
+			if(num%i==0)
+			{	
+			count++;
+			}
+		}
+		if (count==2)
+		{
+			System.out.println(num + " is a prime number...");
+		}
+		else 
+		{
+			System.out.println(num + " is not a prime number...");
+		}
+	}
+}
