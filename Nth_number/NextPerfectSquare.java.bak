@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class NextPerfectSquare 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		for(int i = n + 1; ; i++)
+		{
+			System.out.println("i is"+i);
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.println("j is"+j);
+				if(j * j == i)
+				{
+					System.out.println(i + " is the next perfect square after " + n);
+					return;
+				}
+			}
+		}
+	}
+}

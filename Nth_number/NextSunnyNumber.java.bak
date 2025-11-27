@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class NextSunnyNumber
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int n = sc.nextInt();
+		boolean cond=true;
+		for(int i = n + 1; ; i++)
+		{
+			for(int j = 1; j <= i; j++)
+			{
+				System.out.println(j);
+				if(j * j -1 == i)
+				{
+					cond=false;
+					break;
+				}
+				System.out.println(i);
+			}
+			if(cond==false)
+				{
+					System.out.println(i + " is the next Sunny number after " + n);
+					break;
+				}
+		}
+	}
+}

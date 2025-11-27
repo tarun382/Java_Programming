@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class Nth_palindrome_number 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the nth value");
+		int n = sc.nextInt();
+		int nthpalin=0;
+		for (int i = 1; ;i++ )
+		{
+			int num =i;
+			int rev = 0;
+			int count=0;
+			while (num>0)
+			{
+				int ld = num%10;
+				rev = (rev*10)+ld;
+				num = num/10;
+			}
+			if (rev==i)
+			{
+				count++;
+			}
+			if (count==nthpalin)
+			{
+				System.out.println(i+ " is the nth palindrome number");
+				break;
+			}
+		}
+	}
+}
