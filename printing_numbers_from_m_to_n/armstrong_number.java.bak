@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class armstrong_number 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the m value...");
+		int m = sc.nextInt();
+		System.out.println("Enter the n value...");
+		int n = sc.nextInt();
+		for (int i = m;i<=n ;i++ )
+		{
+			int num=i;
+			int temp=i;
+			int sum=0;
+			int count=0;
+			if (temp>0)
+			{
+				count++;
+				temp=temp/10;
+			}
+			
+			while(num>0)
+			{
+				int expo=1;
+				int ld=num%10;
+				for (int j=1;j<=count ;j++ )
+				{
+					expo=expo*ld;
+				}
+				sum=sum+expo;
+				num=num/10;
+			}
+			if (sum==i)
+			{
+				System.out.println(i+" is the armstrong number...");
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class perfect_square 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the m value...");
+		int m =  sc.nextInt();
+		System.out.println("Enter the n value...");
+		int n =  sc.nextInt();
+		
+		for (int i =m;i<=n ;i++ )
+		{
+			int square = i*i;
+			if(square>=m && square<=n)
+			{
+				System.out.println(square+" is the perfect numnber..");
+			}
+		}
+		
+	}
+}

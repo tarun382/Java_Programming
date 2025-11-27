@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class xylem_number 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the m value...");
+		int m = sc.nextInt();
+		System.out.println("Enter the n value...");
+		int n = sc.nextInt();
+		for (int i=m;i<=n ;i++)
+		{
+			int num=i;
+			int num1=i;
+			int meand=0;
+			int extd=0;
+			int lastd=num%10;
+			num=num/10;
+			while (num>=10)
+			{
+				int ld = num%10;
+				int meand=meand+ld;
+				num=num/10;
+			}
+			extd=lastd+num;
+			if (extd==meand)
+			{
+				System.out.println(i+" is the xylem number");
+			}
+		}
+	}
+}

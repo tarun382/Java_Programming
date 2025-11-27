@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class twisted_prime_number
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the m value...");
+		int m = sc.nextInt();
+		System.out.println("Enter the n value...");
+		int n = sc.nextInt();
+		
+		for (int i=m;i<=n ;i++ )
+		{
+			int num=i;
+			int count=0;
+			int count2=0;
+			for (int j=1;j<=num ;j++)
+			{
+				if (num%j==0)
+				{
+					count++;
+				}
+			}
+			if (count==2)
+			{
+				int rev=0;
+				while (num>0)
+				{
+					int ld = num%10;
+					rev=(rev*10)+ld;
+					num=num/10;
+				}
+				for (int k=1;k<=num ;k++)
+			{
+				if (rev%k==0)
+				{
+					count2++;
+				}
+			}
+				if (count2==2)
+				{
+					System.out.println(i+" is the twisted pair number...");
+				}
+			}
+		}
+	}
+}

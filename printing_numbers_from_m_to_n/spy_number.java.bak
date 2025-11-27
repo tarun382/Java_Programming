@@ -1,0 +1,28 @@
+import java.util.Scanner;
+class spy_number 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc =  new Scanner(System.in);
+		System.out.println("Enter the m value...");
+		int m = sc.nextInt();
+		System.out.println("Enter the n value...");
+		int n = sc.nextInt();
+		for (int i =m;i<=n ;i++ )
+		{
+			int sum=0;
+			int product=1;
+			int num=i;
+			int temp=num;
+			while (num>0)
+			{
+				int ld=num%10;
+				sum = sum+ld;
+				product=product*ld;
+				num=num/10;
+			}
+			if(sum==product)
+				System.out.println(+" is a spy number...");
+		}
+	}
+}

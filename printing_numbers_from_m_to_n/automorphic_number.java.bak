@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class automorphic_number 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the m value...");
+		int m = sc.nextInt();
+		System.out.println("Enter the n value...");
+		int n = sc.nextInt();
+		for (int i =m;i<=n ;i++ )
+		{
+			int square=i*i;
+			int div=1;
+			int count=0;
+			int num=i;
+			while (num>0)
+			{
+				num=num/10;
+				count++;
+			}
+			for (int j=1;j<=count ;j++ )
+			{
+				div=div*10;
+			}
+			if (square%div==i)
+			{
+				System.out.println(i+"is an automorphic number"+square);
+			}
+		}
+	}
+}
