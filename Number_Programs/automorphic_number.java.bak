@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class automorphic_number
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number...");
+		int num = sc.nextInt();
+		int temp = num;
+		int count=0;
+		int div = 1;
+		while(temp>0)
+		{
+			count++;
+			temp = temp/10;
+		}
+		for (int i=1;i<=count;i++ )
+		{
+			div = div * 10;
+		}
+		int square = num * num;
+		System.out.println(num);
+		System.out.println(square);
+		
+		if (num == square%div)
+		{
+			System.out.println(num + " is a automorphic  number...");
+		}
+		else
+		{
+			System.out.println(num + " is not a automorphic number...");
+		}
+		
+	}
+}

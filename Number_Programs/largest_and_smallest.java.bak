@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class largest_and_smallest 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number...");
+		int num =  sc.nextInt();
+		int smallest = 9;
+		int num1=num;
+		while (num>0)
+		{
+			int ld = num%10;
+			if (ld<smallest)
+			{
+				smallest = ld;
+			}
+			num = num/10;
+		}
+		System.out.println(num1+" is smallest number");
+	}
+}

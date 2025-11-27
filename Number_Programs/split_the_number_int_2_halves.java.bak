@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class split_the_number_int_2_halves 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Number...");
+		int num = sc.nextInt();
+		int temp = num;
+		int temp1 = temp;
+		int count=0;
+		
+		while (temp>0)
+		{
+			count++;
+			temp = temp/10;
+		}
+		
+		if (count%2==0)
+		{
+			int div=1;
+			for(int i = 1;i<=count/2;i++){
+		div = div*10;
+		}
+			int ld = num%div;
+			num = num/div;
+			System.out.println(num+"first half");
+			System.out.println(ld+"Seconf half");
+		}
+		else
+		{
+			System.out.println(temp1+" is cannot be split into two halves...");
+		}
+	}
+}

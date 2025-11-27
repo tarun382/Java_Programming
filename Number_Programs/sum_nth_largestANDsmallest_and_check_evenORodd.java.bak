@@ -1,0 +1,76 @@
+import java.util.Scanner;
+class sum_nth_largestANDsmallest_and_check_evenORodd
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number...");
+		int num = sc.nextInt();
+		int sum =0;
+		int count=0;
+		int count1=0;
+		int smallest=0;
+		int largest=0;
+		if (num==0)
+		{
+			System.out.println("Given number is Zero...");
+		}
+		else
+		{
+			System.out.println("Enter the nth largest digit");
+			int n = sc.nextInt();
+			System.out.println("Enter the nth smallest digit");
+			int m = sc.nextInt();
+			for (int i=9;i>=0;i--)
+			{
+				int temp=num;
+				while (temp>0)
+				{
+					int ld=temp%10;
+					if (ld==i)
+					{
+						count++;
+						break;
+					}
+					temp=temp/10;
+				}
+				if(count==n)
+					{
+						System.out.println(i+" is the nth largest digit");
+						largest=i;
+						break;
+					}
+			}
+			for (int j=0;j<=9;j++)
+			{
+				int temp1=num;
+				while(temp1>0)
+				{
+				int ld=temp1%10;
+				if (ld==j)
+				{
+					count1++;
+					break;
+				}
+				temp1=temp1/10;
+				}
+				if(count1==m)
+				{
+					System.out.println(j+" is the nth smallest digit");
+					smallest=j;
+					break;
+				}
+			}
+		}
+		sum=largest+smallest;
+		if(sum%2==0)
+			{
+				System.out.println(num+" sum of largest and smallest digit id even ...");
+			}
+			else
+			{
+				System.out.println(num+" sum of largest and smallest digit id odd ...");
+			}
+	}
+}
+

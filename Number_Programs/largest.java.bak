@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class largest 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc =  new Scanner (System.in);
+		System.out.println("Enter the number...");
+		int num = sc.nextInt();
+		int num1=num;
+		int largest = 0;
+		if(num==0)
+		{
+			System.out.println("Given number is zero");
+		}
+		else
+		{
+			while(num>0)
+			{
+				int ld = num%10;
+				if(ld>largest)
+				{
+					largest = ld;
+				}
+				num = num/10;
+			}
+			System.out.println(largest+" is smallest number");
+		}
+	}
+}

@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class xylem_and_phloem_nummber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter min of three digits...");
+		int num = sc.nextInt();
+		int temp = num;
+		int esum=0;
+		int msum=0;
+		int lastdigit = num%10;
+		num = num/10;
+		while (num>=10)
+		{
+			int ld = num%10;
+			msum = msum + ld;
+			num = num/10;
+		}
+		esum = esum + num;
+		if(esum==msum)
+		{
+			System.out.println(temp + " is a xylem number");
+		}
+		else
+		{
+			System.out.println(temp + " is a phloem number");
+		}
+	}
+}

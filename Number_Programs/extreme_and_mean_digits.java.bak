@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class extreme_and_mean_digits
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number minimun of three digits...");
+		int num = sc.nextInt();
+		int lastdigit = num%10;
+		num = num/10;
+		System.out.println("the mean digits of the give number...");
+		while (num>=10)
+		{
+			int meandigits = num%10;
+			System.out.println(meandigits);
+			num = num/10;
+		}
+		System.out.println(lastdigit+" and "+num+" are the extreme digits");
+	}
+}

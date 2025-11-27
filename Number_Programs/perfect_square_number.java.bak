@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class perfect_square_number 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num = sc.nextInt();
+		boolean condn = false;
+		for(int i = 1;i<=num;i++)
+		{
+			System.out.println("i------->"+i);
+			if (i*i>num)
+			{
+				break;
+			}
+			if(i*i==num)
+			{
+				condn = true;
+				break;
+			}
+			
+		}
+		if(condn)
+		{
+			System.out.println(num+" is a perfect square");
+		}
+		else
+		{
+			System.out.println(num+" is not a perfect square");
+		}
+	}
+}

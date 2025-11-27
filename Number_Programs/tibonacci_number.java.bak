@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class tibonacci_number 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the nth number...");
+		int n = sc.nextInt();
+		int a = 0;
+		int b = 1;
+		int c = 1;
+		int sum =0;
+		for (int i=0;i<=n ;i++ )
+		{
+			
+			System.out.println(a);
+			sum=a+b+c;
+			b=a;
+			c=b;
+			sum=c;
+		}
+	}
+}
